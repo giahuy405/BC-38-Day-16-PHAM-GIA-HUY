@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập vòng lặp</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon"
+        href="https://e7.pngegg.com/pngimages/673/919/png-clipart-arrow-computer-icons-loop-arrow-text-heart-thumbnail.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300;400;500;700&family=Jost:wght@300;400;500;600;700;800;900&family=Lexend:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;700&family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-2">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="myBtn nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                        data-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                        aria-selected="true"><i class="fa-solid fa-book"></i> Bài 1</button>
+                    <button class="myBtn nav-link" id="v-pills-profile-tab" data-toggle="pill"
+                        data-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                        aria-selected="false"><i class="fa-solid fa-book"></i> Bài 2</button>
+                    <button class="myBtn nav-link" id="v-pills-messages-tab" data-toggle="pill"
+                        data-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                        aria-selected="false"><i class="fa-solid fa-book"></i> Bài 3</button>
+                    <button class="myBtn nav-link" id="v-pills-settings-tab" data-toggle="pill"
+                        data-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings"
+                        aria-selected="false"><i class="fa-solid fa-book"></i> Bài 4</button>
+                    <button class="myBtn nav-link" id="v-pills-ex5-tab" data-toggle="pill" data-target="#v-pills-ex5"
+                        type="button" role="tab" aria-controls="v-pills-ex5" aria-selected="false"><i
+                            class="fa-solid fa-book"></i> Bài 5</button>
+                    <button class="myBtn nav-link" id="v-pills-ex6-tab" data-toggle="pill" data-target="#v-pills-ex6"
+                        type="button" role="tab" aria-controls="v-pills-ex6" aria-selected="false"><i
+                            class="fa-solid fa-book"></i> Bài 6</button>
+                    <button class="myBtn nav-link" id="v-pills-ex7-tab" data-toggle="pill" data-target="#v-pills-ex7"
+                        type="button" role="tab" aria-controls="v-pills-ex7" aria-selected="false"><i
+                            class="fa-solid fa-book"></i> Bài 7</button>
+                </div>
+            </div>
+            <div class="col-10 py-5">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <h5>BÀI 1 : TÌM SỐ CHẲN/LẺ NHỎ HƠN 100 </h5>
+                        <div class="box-hint mt-3  ">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <div class="  ml-4">
+                                    <ul class="pt-3">
+                                        <li class="mb-2">Sử dụng biến bước nhảy, cho biến này tăng dần từ 0 đến 100</li>
+                                        <li class="mb-2">Để kiểm tra số chẵn thì đem số đó %2. Nếu kết quả bằng 0 thì đó
+                                            là số chẵn</li>
+                                        <li class="mb-2">Nên tạo ra 2 biến, 1 biến chứa các số chẵn, biến còn lại chứa
+                                            số lẻ.</li>
+                                        <li class="mb-2">
+                                            Sử dụng cách nối chuỗi để nối dồn các số chẵn và lẻ vào 2 biến tương ứng.
+                                            vd: soChan = soChan + i
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-primary px-5 mb-3 ml-2 mt-4" onclick="ex1()">Xem kết quả</button>
+                        <div class="alert alert-primary w-100 ml-2 mr-5 mt-2 shadow" id="alertEx1">
+                            Số chẳn : <p id="displayEven"></p>
+                            Số lẻ : <p id="displayOdd"></p>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <h5>BÀI 2 : ĐẾM SỐ CHIA HẾT CHO 3</h5>
+                        <div class="box-hint mt-3">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+
+                            <div class="collapse" id="collapseExample">
+                                <ul class="ml-4 mt-3">
+                                    <li>Sử dụng biến bước nhảy, cho biến này tăng dần từ 0 đến 1000</li>
+                                    <li>Để kiểm tra số có chia hết cho 3 thì đem số đó %3. Nếu kết quả bằng 0 thì chia
+                                        hết</li>
+                                    <li>Tạo 1 biến đếm. Mỗi khi tìm được 1 số chia hết thì tăng biến đếm lên 1 đơn vị.
+                                        Dùng toán tử tăng: count +=1; count++ ...</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button onclick="ex2()" class="btn btn-primary mt-5">Xem kết quả</button>
+                        <div class="alert alert-primary   w-50 mt-4 shadow " id="alertex2">Số chia hết cho 3 nhỏ hơn
+                            1000 : <span id="displayEx2"></span></div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <h5>BÀI 3 : TÌM SỐ NGUYÊN DƯƠNG NHỎ NHẤT</h5>
+                        <div class="box-hint mt-3">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="ml-4 mt-3">
+                                    <li>Điều kiện tiếp tục vòng lặp là sum < 10000</li>
+                                    <li>sum sẽ là tổng cộng dồn của biến bước nhảy sau mỗi lần lặp</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button onclick="ex3()" class="btn btn-primary mt-5">Xem kết quả</button>
+                        <div class="alert alert-primary   w-75 mt-4"> ==> <span id="displayEx3"></span></div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">
+                        <h5>BÀI 4 : TÍNH TỔNG</h5>
+                        <div class="box-hint mt-3">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="ml-4 mt-3">
+                                    <li>Nhập vào 2 số x và n</li>
+                                    <li>Tính S(n) = x + x^2 + ... + x^n </li>
+                                    <li>Sử dụng các toán tử sau để tính lũy thừa: <a target="_blank"
+                                            href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/pow">Math.pow</a>
+                                        hoặc <a target="_blank"
+                                            href="https://www.w3schools.com/js/tryit.asp?filename=tryjs_arithmetric_exponent1">**</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group mt-5 d-flex w-75">
+                            <input type="text" placeholder="Nhập số x" class="form-control mx-1 w-25" id="xEx4">
+                            <input type="number" placeholder="Nhập số mũ n" class="form-control ml-1 w-25" id="nEx4">
+                        </div>
+
+                        <button onclick="ex4()" class="btn btn-success mt-3">Tính tổng</button>
+                        <div class="alert alert-secondary   w-75 mt-4"> ==> <span id="displayEx4"></span></div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ex5" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <h5>BÀI 5 : TÍNH GIAI THỪA</h5>
+                        <div class="form-group mt-5 d-flex w-50">
+                            <input type="text" placeholder="Nhập số n" class="form-control mr-2" id="nEx5">
+                        </div>
+                        <button onclick="ex5()" class="btn btn-success mt-2">Tính</button>
+                        <div class="alert alert-secondary   w-50 mt-4" id="alertPoint">Giai thừa : <span
+                                id="displayEx5"></span></div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ex6" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <h5>BÀI 6 : TẠO THẺ DIV</h5>
+                        <div class="box-hint mt-3">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="ml-4 mt-3">
+                                    <li>Tạo 1 biến content chứa danh sách các thẻ div.</li>
+                                    <li>Cho biến bước nhảy tăng dần tới 10</li>
+                                    <li>Kiểm tra biến bước nhảy đang là số chẵn hay lẻ trong mỗi lần lặp.</li>
+                                    <li>Nếu biến bước nhảy là số chẵn thì cộng (nối chuỗi) dồn thẻ div đỏ vào content.
+                                        <br> Ngược lại thì cộng dồn thẻ div xanh vào content</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <button onclick="ex6()" class="btn btn-success mt-5">Tạo thẻ</button>
+                        <div class="alert alert-secondary w-75 mt-4" > ==>      
+                                <div id="displayEx6"></div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-ex7" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <h5>BÀI 7 : IN SỐ NGUYÊN TỐ </h5>
+                        <div class="box-hint mt-3">
+                            <h6>💡 Gợi ý</h6>
+                            <a class="ml-4 text-dark collapsed " data-toggle="collapse" href="#collapseExample"
+                                role="button" aria-expanded="false" aria-controls="collapseExample">
+                                Mở rộng để xem thêm <i class="triangle"></i>
+                            </a>
+                            <div class="collapse" id="collapseExample">
+                                <ul class="ml-4 mt-3">
+                                    <li>Số nguyên tố phải lớn hơn 1. Và chỉ chia hết cho 1 và chính nó (số có 2 ước)</li>
+                                    <li>Một số thông thường và >= 2 sẽ luôn có số lượng ước ở nửa đầu căn bậc 2 bằng số ước ở nửa sau căn bậc 2 của nó. Các ước sẽ phân bố thành 2 miền từ [2; sqrt(x)] và từ [sqrt(x); x].
+                                        <br>
+                                        => để biết x có phải số nguyên tố không, ta đem x chia với các số từ 2 đến Math.sqrt(x) (căn bậc 2 của x)
+                                        <br>
+                                        => nếu không chia hết thì x là số nguyên tố
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group mt-5 d-flex w-75">
+                            <input type="number" placeholder="Nhập số n" class="form-control ml-1 w-25"
+                                id="numberEx7">
+                        </div>
+                        <button onclick="ex7()" class="btn btn-success mt-2" >In số</button>
+                        <div class="alert alert-secondary   w-75 mt-4"> ==> <span id="displayEx7"></span></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="./js/index.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
