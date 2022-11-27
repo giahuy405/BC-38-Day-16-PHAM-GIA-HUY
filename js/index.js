@@ -91,21 +91,45 @@ function ex6() {
     document.getElementById("displayEx6").innerHTML = content;
 }
 
+// sai đề 
+// function ex7() {
+//     var displayEx7 = document.getElementById('displayEx7');
+//     var numberEx7 = document.getElementById('numberEx7').value * 1;
+//     var isPrimeNumber = true;
+//     var count = 0;
+//     if (numberEx7 < 2){
+//         displayEx7.innerHTML=numberEx7 + ' không là số NT';
+//         return;
+//     }
+//     // số 5 là số nguyên tố 
+//     for (var i = 1; i <= numberEx7; i++) {
+//         if (numberEx7 % i === 0) {
+//             count++;
+//         }
+//     }
+//     count === 2 ? displayEx7.innerHTML=numberEx7 + ' là số NT' : displayEx7.innerHTML=numberEx7 + ' không là số NT';
+// }
+// fix -> in ra các số nguyên tố từ 1 tới giá trị của ô input
 function ex7() {
     var displayEx7 = document.getElementById('displayEx7');
     var numberEx7 = document.getElementById('numberEx7').value * 1;
     var isPrimeNumber = true;
     var count = 0;
-    if (numberEx7 < 2){
-        displayEx7.innerHTML=numberEx7 + ' không là số NT';
+    if (numberEx7 < 2) {
+        displayEx7.innerHTML = '';
         return;
     }
-    // số 5 là số nguyên tố 
-    for (var i = 1; i <= numberEx7; i++) {
-        if (numberEx7 % i === 0) {
-            count++;
+
+    for (var i = 2; i <= numberEx7; i++) {
+        count = 0;
+        for (var j = 2; j <= i / 2; j++) {
+            if (i % j === 0) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            displayEx7.innerHTML += ' ' + i;
         }
     }
-    count === 2 ? displayEx7.innerHTML=numberEx7 + ' là số NT' : displayEx7.innerHTML=numberEx7 + ' không là số NT';
 
 }
